@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "fee0c0fc-32e9-46b3-af6a-fc5f58c2c256",
+		"name": "8_VoiceIngestion_DataService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Is Service alive",
+			"item": [
+				{
+					"name": "Voice Ingestion Service is alive?",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "479ef789-2f96-4755-9c25-ff62a352305a",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Success\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "605fc9e6-02de-4fe1-95f6-3390a63edd02",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZjaWFkbWluIiwiZW1haWwiOiJmY2lhZG1pbkBhbWwuaWJtLmNvbSIsImRpc3BsYXlOYW1lIjoiRkNJIEFkbWluIiwicm9sZXMiOlsiZGF0YV9zY2llbnRpc3QiLCJzdXBlcnZpc29yIiwiaW52ZXN0aWdhdG9yIiwiYW5hbHlzdCIsImFkbWluIl0sImlhdCI6MTU3NDE4MTAwNCwiZXhwIjoxNTc0MTk1NDA0LCJpc3MiOiJmY2kuaWJtLmNvbSJ9.CKJg1bjetbP0rYkSLVDNvgcuo3rzYM-0EU5qsEZnEX4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZjaWFkbWluIiwiZW1haWwiOiJmY2lhZG1pbkBhbWwuaWJtLmNvbSIsImRpc3BsYXlOYW1lIjoiRkNJIEFkbWluIiwicm9sZXMiOlsiZGF0YV9zY2llbnRpc3QiLCJzdXBlcnZpc29yIiwiaW52ZXN0aWdhdG9yIiwiYW5hbHlzdCIsImFkbWluIl0sImlhdCI6MTU3NDE4MTAwNCwiZXhwIjoxNTc0MTk1NDA0LCJpc3MiOiJmY2kuaWJtLmNvbSJ9.CKJg1bjetbP0rYkSLVDNvgcuo3rzYM-0EU5qsEZnEX4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://vkm1.fyre.ibm.com:8981/cloud9services/isServiceAlive",
+							"protocol": "https",
+							"host": [
+								"vkm1",
+								"fyre",
+								"ibm",
+								"com"
+							],
+							"port": "8981",
+							"path": [
+								"cloud9services",
+								"isServiceAlive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Voice DataService is alive?",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b81971ae-c7c6-4d8a-8f7c-ab6553777cb2",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Success\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "fe724705-a88f-4153-9fb9-67f1724c9ac3",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://vkm1.fyre.ibm.com:8981/SIFSVoiceDataService/voice/v1/isServiceAlive?--insecure",
+							"protocol": "https",
+							"host": [
+								"vkm1",
+								"fyre",
+								"ibm",
+								"com"
+							],
+							"port": "8981",
+							"path": [
+								"SIFSVoiceDataService",
+								"voice",
+								"v1",
+								"isServiceAlive"
+							],
+							"query": [
+								{
+									"key": "--insecure",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
