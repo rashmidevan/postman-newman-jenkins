@@ -1,0 +1,8 @@
+{
+  "requestTimeout":90000,
+  "defaultCommandTimeout" : 40000,
+  "reporter": "junit",
+  "reporterOptions": {
+    "mochaFile": "results/[hash].xml"
+  }
+}

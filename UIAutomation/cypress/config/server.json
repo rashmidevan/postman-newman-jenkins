@@ -1,0 +1,9 @@
+{
+    "env": {
+        "siDashboardUrl": "https://fci-common-ui-nginx-fci.apps.si-kube.os.fyre.ibm.com/login.html",
+        "adminUser": "siadmin",
+        "adminPassword": "password",
+        "supervisorUser": "sisupervisor",
+        "supervisorPassword": "password"
+    }    
+}
