@@ -4,7 +4,8 @@ pipeline {
  stage('Build from local') {
     steps {
       script {
-      'C:\\GeethaRH\\Backup1\\jenkins\\printHello.bat'
+       'cd C:\\GeethaRH\\Backup1\\jenkins\\'
+       'printHello.bat >hello.txt'
         }
       }
      }
